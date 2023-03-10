@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+</head>
+<body>
+    <style>     
+        body{
+            background: rgba(214, 214, 214);
+        }
+        .login-box{
+          
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+
+        .login-container{
+         align-items: center;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            min-height: 100vh;
+        }
+        .login-container  .form{
+         margin-top: 50px;
+            
+            width: 300px;
+            height: 700px;
+            background: rgba(214, 214, 214);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+            overflow-y: wrap;
+
+        }
+        h1{
+            background-color: white;
+            text-align: center;
+
+        }
+        .login-container .form .form-control{
+            position: relative;
+            width: auto;
+            align-items: center;
+            display: block;
+            justify-content:center !important;
+            padding: 5px 5px;
+            text-align: center;
+        }
+        .login-container .form .form-control .input{
+            text-align: center;
+            position: relative;
+            width: 90%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-family: sans-serif;
+            background: transparent;
+            font-size: 16px;
+            border-radius: 25px;
+            text-shadow: 1px 1px 0 #fff;
+            box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+        }
+        .login-container #other-input{
+            padding: 6px;
+            border-radius: 9px;
+            background: #D3CFCF;
+            box-shadow: 4px 4px 4px 0px #D3CFCF inset, -4px -4px 4px 0px #b6a9a9  inset;
+        }
+        .radios{
+            padding: 5px;
+        }
+        .label{
+            display: inline-flex;
+            cursor: pointer;
+        }
+        #name-label, #number-label, #email-label{
+            display: inline-block;
+            width: 100px;
+        }
+       
+        section {
+            margin-left: 400px;
+        }
+        .textarea{
+            text-shadow: 1px 1px 0 #fff;
+            box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        #submit{
+            margin-Left: 40px;
+        }
+        .imager{
+            position: relative;
+            height: 120px;
+            width: 120px;
+            border-radius: 50px;
+           margin-left: 30%;
+        }
+        .ttitle{
+            margin-left: 30%;
+        }
+    </style>
+
+
+    <section class="login-box">
+        <div class="login-container">
+        <form action="https://sheetdb.io/api/v1/vrql8l049ub26" method="post" id="sheetdb-form" class="form">
+            <img src="./css/local.png" alt="" class="imager">
+            <p class="ttitle">Give Your Opinion</p>
+        
+            <div class="form-control">
+                <label for="fullname" id="name-label">Full Name:</label>
+                <input class="input" type="text" placeholder="Enter the Name" name="data[fullname]" required>
+            </div>
+            <div class="form-control">
+                <label  for="email" id="email-label">Email Name:</label>
+                <input class="input" type="text" placeholder="Enter the Email" name="data[email]" required>
+            </div>
+            <!-- <div class="form-control">
+                <label  for="age" id="number-label">Age:</label>
+                <input class="input" type="text" placeholder="Enter the Age" name="data[age]" required>
+            </div> -->
+
+            <div id="other-input">
+                <div class="form-control radios">
+                    <label for="service" id="dropdown" >Name of your Instructor</label>
+                    <select name="data[Instructor]">
+                        <option value="David" >David</option>
+                        <option value="Chelsea" >Chelsea</option>
+                        <option value="Charan" >Charan</option>
+                        <option value="Sarah" >Sarah</option>
+                        <option value="Druh" >Druh</option>
+                        <option value="Kirt" >Kirt</option>
+                        <option value="Steve" >Steve</option>
+                        <option value="Jyoti" >Jyoti</option>
+                    </select>
+                </div>
+                <div class="form-control radios">
+                    <label for="service" id="dropdown" >Are you one of our Teen Students?</label>
+                    <select name="data[teen?]">
+                        <option value="Yes" >Yes</option>
+                        <option value="No" >No</option>
+                    </select>
+                </div>
+                <div class="button-control radios">
+                    <label class="label" for="rating" id="radio">Please Rate your Experience with our Instructor</label>
+                    <br/>
+                    <br/>
+                    <input type="radio" id="Worst" name="data[Rating]" value="Worst">
+                     <label for="Worst">Worst</label><br>
+                    <input type="radio" id="Bad" name="data[Rating]" value="Bad" >
+                    <label for="Bad">Bad</label><br>
+                    <input type="radio" id="Good" name="data[Rating]" value="Good">
+                    <label for="Good">Good</label><br>
+                    <input type="radio" id="VeryGood" name="data[Rating]" value="VeryGood">
+                    <label for="VeryGood">Vey Good</label><br>
+                    <input type="radio"  id="ExtremelyGood" name="data[Rating]" value="ExtremelyGood">
+                    <label for="ExtremelyGood">ExtremelyGood</label><br>
+                </div>
+                <div class="button-control radios">
+                     <label for="ip">Are you a local Driving School </label><br><br>
+                     <label for="ip">Yes </label><br>
+                    <input id="ipx" type="radio" name="data[ip]" value="">
+                </div>
+             
+                <div id="textarea">
+                    <p>Please give a brief description about your Experience with our Driving School</p>
+                    <textarea  class="textarea" cols="32" rows="4" placeholder="Comment" name="data[Comment]"> </textarea>
+                </div>
+                <div id="submit">
+                    <input type="Submit">
+                </div>
+            </div>
+        </form>
+        </div>
+        <script>
+  
+            // let ipd = document.getElementById('ip').value;
+          
+             fetch('https://api.ipify.org')
+                        .then((res) => res.text())
+                        .then(ip => {
+                            let ipxs = document.getElementById("ipx");
+                            ipxs.value = ip;
+                        });
+                  
+
+            var form = document.getElementById('sheetdb-form');
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById('sheetdb-form')),
+                }).then(response => response.json()).then((html) => {
+                    alert("success");
+                    location.reload();
+                });
+            });
+
+        </script>
+    </section>
+
+</body>
+</html>
